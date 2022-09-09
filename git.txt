@@ -1,0 +1,78 @@
+一、配置Git用户名和邮箱
+    git config --global user.name "jay"
+
+    git config --global user.email "jay@zanzung.com"
+
+二、克隆项目仓库到本地
+    cd /folder/
+git 
+    clone https://repourl/reponame.git
+	git@codeup.teambition.com:5f082bcf8c9b655e96140734/Codeup-Demo.git
+
+三、检查z分支
+    cd reponame
+
+    git branch
+
+     # 应输出：
+     
+* master
+  
+       dev
+
+四、切换工作分支到dev分支
+    git checkout dev
+    
+git pull
+
+五、基于dev分支创建feature分支
+    git checkout dev
+    
+git checkout -b feature_123`
+
+    # 检查当前工作分支状态
+    git status
+    
+# 应输出
+On branch feature_123
+
+六、工作过程中合并dev分支最新代码
+    git checkout dev 		#切换到dev分支
+    
+git pull 			#获取dev分支最新代码
+    
+git checkout feature_123 	#切换到feature分支
+
+    git merge dev 		#合并团队的代码
+
+其他：
+    查看状态：
+	git status
+    删除：
+	git branch -d 分支名
+    放弃所有的文件修改:
+	git checkout .
+    查看当前分支修改状态
+	git stash
+    提交分支修改
+	git commit -a -m"fix."
+    查看修改日志
+	tig
+	git diff
+	git log
+    回退所有内容到上一个版本
+	git reset HEAD^            # 回退所有内容到上一个版本  
+	git reset HEAD^ hello.php  # 回退 hello.php 文件的版本到上一个版本  
+	git reset 052e             # 回退到指定版本
+    强制推送
+	git push -u origin dev -f
+    修改地址
+	git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
+
+    获取所有的分支
+	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+
+ln -sf /usr/local/lib/libsybdb.so.5.0.0 /usr/local/lib/libsybdb.so.5
+ln -sf /usr/local/cuda/lib64/libcudnn.so.7.0.5 /usr/local/cuda/lib64/libcudnn.so.7
+
+

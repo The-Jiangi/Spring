@@ -1,0 +1,19 @@
+ipconfig：本地地址：192.168.199.113
+
+生成控制器：
+    rails generate controller User show index
+
+生成模型：
+    rails generate model Student_Back text:string asset_ids:string theme_activity_id:string student_id:string RAILS_ENV=production
+    rails generate migration add_select_time_to_Student_Back  select_time:datetime
+    rails generate migration add_type_to_Role type:string
+    rails generate migration Remove_type_name_From_Teacher_Type type_name:integer
+模型迁移:将SQL文件导入Rails数据库：
+    bundle exec rails db < my_db.sql
+
+生成脚手架：
+    rails generate scaffold User name:string email:string
+
+撤销：
+    rails destroy model StudyGroups
+    rails db:rollback    # 撤销迁移

@@ -1,0 +1,17 @@
+后台启动rails进程：
+    docker-compose up(down) -d
+运行数据库迁移：
+    docker-compose run web rails db:create $ docker-compose run web rails db:migrate
+进入服务器：
+    docker-compose exec main bash
+
+查看镜像文件：
+    docker images
+删除镜像文件：
+    docker rmi -f imges_id
+
+查看容器：
+    docker volume ls
+
+删除容器：
+    docker volume rm VOLUME_NAME
