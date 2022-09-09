@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1、 配置HelloWord对象创建 -->
+    <bean id="hw" class="jay.factory_demo.HelloWord"/>
+    <bean id="hf" class="jay.factory_demo.HelloFactory"/>
+
+    <!--2、 set方法注入属性 -->
+    <bean id="book1" class="jay.factory_demo.Book">
+        <!-- 使用property完成属性的注入
+             name: 类里面属性名称
+             value: 向类里面注入属性
+        -->
+        <property name="bauthor" value="jay"/>
+        <!-- 属性值包含特殊符号 -->
+        <property name="bname">
+            <value><![CDATA[<<水浒传>>]]></value>
+        </property>
+        <!-- 设置地址为空值 -->
+        <property name="address">
+            <null/>
+        </property>
+    </bean>
+
+    <!--2.1、 set方法注入属性(简化) -->
+    <bean id="book2" class="jay.factory_demo.Book" p:bname="西游记" p:bauthor="me"/>
+
+    <!--3、 用有参构造注入属性 -->
+    <bean id="orders" class="jay.factory_demo.Orders">
+        <constructor-arg name="oname" value="电脑"/>
+        <constructor-arg name="address" value="China"/>
+    </bean>
+
+
+</beans>
