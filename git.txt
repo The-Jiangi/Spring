@@ -28,7 +28,7 @@ git pull
 五、基于dev分支创建feature分支
     git checkout dev
     
-git checkout -b feature_123`
+git checkout -b fix-update-specific_products-positions-bug
 
     # 检查当前工作分支状态
     git status

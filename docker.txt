@@ -1,5 +1,5 @@
 后台启动rails进程：
-    docker-compose up(down) -d
+    docker-compose down（up -d）
 运行数据库迁移：
     docker-compose run web rails db:create $ docker-compose run web rails db:migrate
 进入服务器：
