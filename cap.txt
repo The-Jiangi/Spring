@@ -10,14 +10,15 @@ ssh root@192.168.199.11 -p 22526（测试）
 ssh root@114.55.255.190 -p 10022（正式）
 ssh hanggaoqt@192.168.100.114   （资产正式）
 ssh root@192.168.199.11 -p 22422（资产测试）
+ssh uroot@192.168.80.250	         （耗材正式）
 
 mysql -hlocalhost -P3307 -uroot -p123456
 set global time_zone='+8:00'
 
 上传代码
-    docker-compose exec main bash -lc "cap staging deploy"
+    docker-compose exec main bash -lc "cap staging_hgao deploy"
     docker-compose exec main bash -lc "cap production_hzqcgjjg deploy"
-    docker-compose exec main bash -lc "cap staging puma:start"
+    docker-compose exec main bash -lc "cap staging_hgao puma:start"
     docker-compose exec main bash -lc "puma_error.log"
 修改网址
     git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
@@ -28,12 +29,13 @@ set global time_zone='+8:00'
     nginx -s reload
 183.129.202.5:10443
 
-20220816083930
+20220914055359
 vi /usr/local/bundle/bin/bundle
 
 bin/rails db:seed RAILS_ENV=production		# 默认是开发环境，要加这个进生产环境
 bin/rails db:migrate RAILS_ENV=production
 bin/rails console RAILS_ENV=production
+rails s RAILS_ENV=production
 RAILS_ENV=production bundle exec rails c
 bin/rails db:backup RAILS_ENV=production		# 备份数据库
 PrintMachine

@@ -8,6 +8,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     @Test
@@ -36,10 +39,38 @@ public class Main {
         // 删除
 //        bookService.deleteBook("2");
 
-        // 查询1
-        System.out.println(bookService.selectBook());
-        System.out.println(bookService.selectOne("1"));
-        System.out.println(bookService.selectAll());
+        // 查询
+//        System.out.println(bookService.selectBook());
+//        System.out.println(bookService.selectOne("1"));
+//        System.out.println(bookService.selectAll());
+
+        // 批量添加
+//        List<Object[]> batchArgs = new ArrayList<>();
+//        Object[] o1 = {"3", "java", "1"};
+//        Object[] o2 = {"4", "python", "1"};
+//        Object[] o3 = {"5", "php", "0"};
+//        batchArgs.add(o1);
+//        batchArgs.add(o2);
+//        batchArgs.add(o3);
+//        bookService.batchAdd(batchArgs);
+
+        // 批量修改
+//        List<Object[]> batchArgs = new ArrayList<>();
+//        Object[] o1 = {"java123", "11", "3"};
+//        Object[] o2 = {"python312", "11", "4"};
+//        Object[] o3 = {"php12312", "01", "5"};
+//        batchArgs.add(o1);
+//        batchArgs.add(o2);
+//        batchArgs.add(o3);
+//        bookService.batchUpdate(batchArgs);
+
+        // 批量删除
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {"3"};
+        Object[] o2 = {"4"};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        bookService.batchDelect(batchArgs);
 
 //        System.out.println((172+126+133+ 8+14));
 //        System.out.println((238+228+310+ 3+ 6)/60);

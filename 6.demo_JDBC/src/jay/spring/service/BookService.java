@@ -37,4 +37,15 @@ public class BookService {
         return bookDao.selectAll();
     }
 
+    public void batchAdd(List<Object[]> batchArgs){
+        bookDao.batchAddBook(batchArgs);
+    }
+
+    public void batchUpdate(List<Object[]> batchArgs) {
+        bookDao.batchUpdateBook(batchArgs);
+    }
+
+    public void batchDelect(List<Object[]> batchArgs) {
+        bookDao.batchDelectBook(batchArgs);
+    }
 }

@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Repository
@@ -19,7 +20,7 @@ public class BookDaoImpl implements BookDao{
     public void add(Book book) {
         // 创建SQL语句
         String sql = "insert into t_book values(?,?,?)";
-        // 焦勇方法实现
+        // 方法实现
         Object[] args = {book.getBookId(), book.getBookName(), book.getbStatus()};
         int update = jdbcTemplate.update(sql, args);
         System.out.println(update);
@@ -28,10 +29,8 @@ public class BookDaoImpl implements BookDao{
     /** 修改 */
     @Override
     public void update(Book book) {
-        // 创建SQL语句
-        String sql = "update t_book set id=?,name=?,status=?";
-        // 焦勇方法实现
-        Object[] args = {book.getBookId(), book.getBookName(), book.getbStatus()};
+        String sql = "update t_book set bookName=?,bStatus=? where bookId=?";
+        Object[] args = {book.getBookName(), book.getbStatus(), book.getBookId()};
         int update = jdbcTemplate.update(sql, args);
         System.out.println(update);
     }
@@ -39,9 +38,7 @@ public class BookDaoImpl implements BookDao{
     /** 删除 */
     @Override
     public void delete(String id) {
-        // 创建SQL语句
         String sql = "delete from t_book where bookId=?";
-        // 焦勇方法实现
         int update = jdbcTemplate.update(sql, id);
         System.out.println(update);
     }
@@ -68,5 +65,27 @@ public class BookDaoImpl implements BookDao{
         String sql = "select * from t_book";
         List<Book> bookList = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Book>(Book.class));
         return bookList;
+    }
+
+    /** 批量添加 */
+    @Override
+    public void batchAddBook(List<Object[]> batchArgs) {
+        String sql = "insert into t_book values(?,?,?)";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    @Override
+    public void batchUpdateBook(List<Object[]> batchArgs) {
+        String sql = "update t_book set bookName=?,bStatus=? where bookId=?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    @Override
+    public void batchDelectBook(List<Object[]> batchArgs) {
+        String sql = "delete from t_book where bookId=?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
     }
 }
