@@ -1,8 +1,8 @@
 git commit -a -m""
 完：
-    耗材重设密码功能
+    耗材重设密码功能，修复杭汽校耗材系统 用户信息同步功能
 急：
-    修复杭汽校耗材系统 用户信息同步功能(缺少文件)
+    libcrypto.so.1.0.0 libssl.so.1.0.0
 等：
     
 
@@ -14,42 +14,34 @@ ssh root@192.168.199.11 -p 62223（耗材测试）
 ssh root@192.168.80.250 -p 62223（耗材正式）
 
 # server side
-chown root:root ~/.ssh
-chown root:root ~/.ssh/authorized_keys
-chmod 700 ~/.ssh
-chown 600 ~/.ssh/authorized_keys
-
-
-
-mysql -hlocalhost -P3307 -uroot -p123456
-set global time_zone='+8:00'
+    chown root:root ~/.ssh
+    chown root:root ~/.ssh/authorized_keys
+    chmod 700 ~/.ssh
+    chown 600 ~/.ssh/authorized_keys
 
 上传代码
     docker-compose exec main bash -lc "cap staging deploy"
-    docker-compose exec main bash -lc "cap production_hzqcgjjg deploy"
     docker-compose exec main bash -lc "cap staging puma:start"
     docker-compose exec main bash -lc "puma_error.log"
-修改网址
-    git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
+
 上传前端
     rsync
-    scp -r -P 22526 ./dist_new/* root@192.168.199.11:/app/shared/public
-    scp -P 22922 main-e6b718e058186cf6e90e.js root@192.168.199.11:/app/shared/public/client/assets
+    scp -P 22922 main.js root@192.168.199.11:/app/shared/public/client/assets
+    scp -r -P 62223 '.\dist(9)\*' root@192.168.80.250:/app/shared/public/frontend_admin/
     nginx -s reload
+
+修改网址
+    git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
 183.129.202.5:10443
 
 20220914055359
 vi /usr/local/bundle/bin/bundle
 
+rails db:backup					# 备份数据库
 bin/rails db:seed RAILS_ENV=production		# 默认是开发环境，要加这个进生产环境
-bin/rails db:migrate RAILS_ENV=production
-bin/rails console RAILS_ENV=production
-rails s RAILS_ENV=production
 RAILS_ENV=production bundle exec rails c
-bin/rails db:backup RAILS_ENV=production		# 备份数据库
-PrintMachine
-printer_contents_list
-tail -f log/production.log 实时查看日志
+
+tail -f log/production.log				# 实时查看日志
 
 强制推送
     git push -u origin feature-change-password -f

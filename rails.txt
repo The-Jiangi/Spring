@@ -17,3 +17,36 @@ ipconfig：本地地址：192.168.199.113
 撤销：
     rails destroy model StudyGroups
     rails db:rollback    # 撤销迁移
+
+Mysql：
+    mysql -hlocalhost -P3307 -uroot -p123456
+    set global time_zone='+8:00'
+
+####   发送邮箱   ####
+
+require 'net/smtp'
+require 'mailfactory'
+from_name = 'localhost'
+from_mail = '860529382@qq.com'
+to_name = 'ks'
+to_mail = '2640405337@qq.com'
+smtp_host = 'smtp.qq.com'
+smtp_port   =  25
+smtp_domain  = 'localhost.localdomain'
+smtp_user = "860529382@qq.com"
+smtp_pwd = "nbdymjpqtfnnbecj"（邮箱-设置-账户-POP3/IMAP/SMTP/服务）
+t = Time.now
+subj = '1331 thinkpad test hopy'
+msg_body = "send msg from ruby.\n"
+msg_date = t.strftime("%a, %d %b %Y %H:%M:%S +0800")
+
+mail = MailFactory.new
+mail.to = to_mail
+mail.from = from_mail
+mail.subject = subj
+mail.text = msg_body
+# mail.attach(File.expand_path("./mail.rb"))   #发送附件
+
+Net::SMTP.start(smtp_host,smtp_port,smtp_domain, smtp_user, smtp_pwd, :login) do |smtp| 
+  smtp.send_message(mail.to_s,smtp_user,to_mail)
+end

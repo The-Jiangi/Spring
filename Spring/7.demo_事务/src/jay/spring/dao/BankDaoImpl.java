@@ -4,6 +4,7 @@ import jay.spring.entity.Bank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -17,6 +18,7 @@ public class BankDaoImpl implements BankDao {
 
     /** 多钱方法 */
     @Override
+    @Nullable   // 方法值可以为空(与本例无关            )
     public void addMoney() {
         String sql = "update t_bank set money=money+? where name=?";
         jdbcTemplate.update(sql, 100, "Lucy");
