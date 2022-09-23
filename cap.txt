@@ -1,17 +1,18 @@
 git commit -a -m""
 完：
-    耗材重设密码功能，修复杭汽校耗材系统 用户信息同步功能
+     修复固定资产分析报表中三个汇总的导出问题
 急：
-    libcrypto.so.1.0.0 libssl.so.1.0.0
+    解决固定资产正式端无法上传问题
 等：
-    
+    修复耗材盘点任务单管理没有判断盘点功能
 
 ssh root@192.168.199.11 -p 22526（测试）
 ssh root@114.55.255.190 -p 10022（正式）
-ssh root@192.168.199.11 -p 22422（资产测试）
-ssh hanggaoqt@192.168.100.114   （资产正式）
 ssh root@192.168.199.11 -p 62223（耗材测试）
 ssh root@192.168.80.250 -p 62223（耗材正式）
+ssh root@192.168.199.11 -p 22922（资产测试）
+ssh hanggaoqt@192.168.100.114   （资产正式）
+
 
 # server side
     chown root:root ~/.ssh
@@ -20,8 +21,8 @@ ssh root@192.168.80.250 -p 62223（耗材正式）
     chown 600 ~/.ssh/authorized_keys
 
 上传代码
-    docker-compose exec main bash -lc "cap staging deploy"
-    docker-compose exec main bash -lc "cap staging puma:start"
+    docker-compose exec main bash -lc "cap production_hgao deploy"
+    docker-compose exec main bash -lc "cap staging_hgao puma:start"
     docker-compose exec main bash -lc "puma_error.log"
 
 上传前端
@@ -45,4 +46,3 @@ tail -f log/production.log				# 实时查看日志
 
 强制推送
     git push -u origin feature-change-password -f
-
