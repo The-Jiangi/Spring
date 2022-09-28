@@ -1,29 +1,12 @@
 package com.jay.bean;
 
-/**
- * @author Administrator
- */
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor // 全参构造器
 public class Pet {
     private String pname;
 
-    public Pet() {}
-
-    public Pet(String pname) {
-        this.pname =pname;
-    }
-
-    public void setpname(String pname) {
-        this.pname = pname;
-    }
-
-    public String getpname() {
-        return pname;
-    }
-
-    @Override
-    public String toString() {
-        return "Pet{" +
-                "pname='" + pname + '\'' +
-                '}';
-    }
 }

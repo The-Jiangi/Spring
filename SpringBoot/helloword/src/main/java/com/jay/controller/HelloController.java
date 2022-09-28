@@ -2,11 +2,10 @@ package com.jay.controller;
 
 
 import com.jay.bean.Car;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 //
 //
@@ -15,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Administrator
  * @RestController = @Controller + @ResponseBody
  */
+
+@Slf4j  // Log日志功能
 @RestController
 public class HelloController {
 
@@ -27,7 +28,8 @@ public class HelloController {
     }
 
     @RequestMapping("/hello")
-    public String handle01(){
-        return "Hello, Spring Boot 2!";
+    public String handle01(@RequestParam("name") String name){  // import 第8行
+        log.info("请求进来了....");
+        return "Hello, Spring Boot 2! 你好："+name;
     }
 }
