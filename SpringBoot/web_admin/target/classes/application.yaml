@@ -1,0 +1,11 @@
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true   # 手动开启REST风格(开启页面表单的Rest功能)
+    contentnegotiation:
+      favor-parameter: true   # 开启请求参数内容线上模式  ?format=json  ?format=xml
+  web:
+    resources:
+      cache:
+        period: 11000     # 静态资源缓存秒数

@@ -5,49 +5,51 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>1、测试REST风格</h1>
-    <form action="/user" method="get">
-        <input value="REST-GET 提交" type="submit">
-    </form>
-    <form action="/user" method="post">
-        <input value="REST-POST 提交" type="submit">
-    </form>
-    <form action="/user" method="post">
-        <input name="_method" type="hidden" value="DELETE">
-        <input value="REST-DELETE 提交" type="submit">
-    </form>
-    <form action="/user" method="post">
-        <input name="_method" type="hidden" value="PUT">
-        <input value="REST-PUT 提交" type="submit">
-    </form>
+<h1>1、测试REST风格</h1>
+<form action="/user" method="get">
+    <input value="REST-GET 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input value="REST-POST 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="DELETE">
+    <input value="REST-DELETE 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="PUT">
+    <input value="REST-PUT 提交" type="submit">
+</form>
 
-    <h1>2、测试基本注解</h1>
-    <ul>
-        <a href="car/3/owner/lisi?age=18&inters=篮球&inters=game">car/{id}/owner/{username}</a>
-        <li>@PathVariable （路径变量 {id}/{username}）</li>
-        <li>@RequestHeader（获取请求头 header）</li>
-        <li>@RequestParam （获取请求参数 ?age=18&inters=篮球&inters=game）</li>
-        <li>@CookieValue  （获取cookie值）</li>
-        <li>@RequestBody  （获取请求体[POST]）</li><br/>
-        <form action="/save" method="post">
-            测试@RequestBody获取数据 <br/>
-            用户名：<input name="username"/> <br/>
-            邮箱：<input name="email"/>
-            <input type="submit" value="提交"/>
-        </form><br/>
-        <li>@RequestAttribute（获取request域属性）</li>
-        <li>@MatrixVariable（矩阵变量）</li>
-    </ul>
-
-    <h1>3、测试封装POJO：</h1>
-    <form action="/saveuser" method="post">
-        姓名：<input name="userName" value="zhangsan"/><br/>
-        年龄：<input name="age" value="18"/><br/>
-        生日：<input name="birth" value="2022/9/29"/><br/>
-<!--        宠物姓名：<input name="pet.name" value="阿猫"/><br/>-->
-<!--        宠物年龄：<input name="pet.age" value="5"/>-->
-        宠物：<input name="pet" value="阿猫,3"/>
-        <input type="submit" value="保存"/>
+<h1>2、测试基本注解</h1>
+<ul>
+    <a href="car/3/owner/lisi?age=18&inters=篮球&inters=game">car/{id}/owner/{username}</a>
+    <li>@PathVariable （路径变量 {id}/{username}）</li>
+    <li>@RequestHeader（获取请求头 header）</li>
+    <li>@RequestParam （获取请求参数 ?age=18&inters=篮球&inters=game）</li>
+    <li>@CookieValue （获取cookie值）</li>
+    <li>@RequestBody （获取请求体[POST]）</li>
+    <br/>
+    <form action="/save" method="post">
+        测试@RequestBody获取数据 <br/>
+        用户名：<input name="username"/> <br/>
+        邮箱：<input name="email"/>
+        <input type="submit" value="提交"/>
     </form>
+    <br/>
+    <li>@RequestAttribute（获取request域属性）</li>
+    <li>@MatrixVariable（矩阵变量）</li>
+</ul>
+
+<h1>3、测试封装POJO：</h1>
+<form action="/saveuser" method="post">
+    姓名：<input name="userName" value="zhangsan"/><br/>
+    年龄：<input name="age" value="18"/><br/>
+    生日：<input name="birth" value="2022/9/29"/><br/>
+    <!--        宠物姓名：<input name="pet.name" value="阿猫"/><br/>-->
+    <!--        宠物年龄：<input name="pet.age" value="5"/>-->
+    宠物：<input name="pet" value="阿猫,3"/>
+    <input type="submit" value="保存"/>
+</form>
 </body>
 </html>

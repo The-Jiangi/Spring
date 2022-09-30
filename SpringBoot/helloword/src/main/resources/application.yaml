@@ -3,14 +3,15 @@ spring:
     hiddenmethod:
       filter:
         enabled: true   # 手动开启REST风格(开启页面表单的Rest功能)
-#    static-path-pattern: /resources/**  # 修改静态资源(图片/文件)请求地址
+    #    static-path-pattern: /resources/**  # 修改静态资源(图片/文件)请求地址
     contentnegotiation:
       favor-parameter: true   # 开启请求参数内容线上模式  ?format=json  ?format=xml
   web:
     resources:
-#      static-locations: [classpath:/hehe/] # 修改静态资源(图片/文件)访问地址，META-INF下的资源一直可以被访问
-#      add-mappings: false   # 禁用所有静态资源
+      #      static-locations: [classpath:/hehe/] # 修改静态资源(图片/文件)访问地址，META-INF下的资源一直可以被访问
+      #      add-mappings: false   # 禁用所有静态资源
       cache:
         period: 11000     # 静态资源缓存秒数
-
-
+server:
+  servlet:
+    context-path: /world  # 设置项目的前置访问路径

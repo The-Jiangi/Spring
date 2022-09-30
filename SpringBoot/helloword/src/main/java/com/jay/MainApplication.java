@@ -9,10 +9,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  * 主程序类
+ *
  * @author Administrator
  * @SpringBootApplication： 这是一个SpringBoot应用
  * scanBasePackages: 改变扫描路径
- * */
+ */
 
 @SpringBootApplication(scanBasePackages = "com.jay")
 public class MainApplication {
@@ -30,23 +31,23 @@ public class MainApplication {
         // 3、从容器中获取组件（是单实例对象）
         Pet tom1 = run.getBean("tom", Pet.class);
         Pet tom2 = run.getBean("tom", Pet.class);
-        System.out.println("tom1 = tom2: "+(tom1 == tom2));
+        System.out.println("tom1 = tom2: " + (tom1 == tom2));
 
         // 4、获取配置类组件（配置类里的组件设置为了多实例对象）
         MyConfig bean = run.getBean(MyConfig.class);
         User user1 = bean.user01();
         User user2 = bean.user01();
-        System.out.println("user1 = user2: "+(user1 == user2));
+        System.out.println("user1 = user2: " + (user1 == user2));
 
         // 5、条件装配，containsBean判断是否包含某个组件
         boolean user01 = run.containsBean("user01");
-        System.out.println("user01: "+user01);
+        System.out.println("user01: " + user01);
 
         boolean tom = run.containsBean("tom");
-        System.out.println("tom: "+tom);
+        System.out.println("tom: " + tom);
 
-        int min =  625;
-        int sec = 1223;
-        System.out.println(min+(sec/60));
+        int min = 625 + 23 + 19 + 22;
+        int sec = 1223 + 31 + 43 + 28;
+        System.out.println(min + (sec / 60));
     }
 }

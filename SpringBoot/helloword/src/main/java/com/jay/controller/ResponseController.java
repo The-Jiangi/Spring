@@ -18,7 +18,7 @@ public class ResponseController {
         person.setAge(10);
         person.setBirth(new Date());
         person.setUserName("张三");
-        person.setPet(new Pet("cat",5));
+        person.setPet(new Pet("cat", 5));
         return person;
     }
 }

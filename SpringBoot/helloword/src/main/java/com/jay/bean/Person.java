@@ -1,6 +1,7 @@
 package com.jay.bean;
 
 import lombok.Data;
+
 import java.util.Date;
 
 @Data

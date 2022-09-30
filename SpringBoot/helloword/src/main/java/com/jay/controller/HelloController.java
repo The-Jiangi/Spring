@@ -21,37 +21,37 @@ public class HelloController {
     Car car;
 
     @RequestMapping("/car")
-    public Car car(){
+    public Car car() {
         return car;
     }
 
     @RequestMapping("/hello")
-    public String handle01(@RequestParam("name") String name){  // import 第8行
+    public String handle01(@RequestParam("name") String name) {  // import 第8行
         log.info("请求进来了....");
-        return "Hello, Spring Boot 2! 你好："+name;
+        return "Hello, Spring Boot 2! 你好：" + name;
     }
 
-//    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    //    @RequestMapping(value = "/user", method = RequestMethod.GET)
     @GetMapping("/user")
-    public String getUser(){
+    public String getUser() {
         return "GET-张三";
     }
 
-//    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    //    @RequestMapping(value = "/user", method = RequestMethod.POST)
     @PostMapping("/user")
-    public String postUser(){
+    public String postUser() {
         return "POST-张三";
     }
 
-//    @RequestMapping(value = "/user", method = RequestMethod.PUT)
+    //    @RequestMapping(value = "/user", method = RequestMethod.PUT)
     @PutMapping("/user")
-    public String putUser(){
+    public String putUser() {
         return "PUT-张三";
     }
 
-//    @RequestMapping(value = "/user", method = RequestMethod.DELETE)
+    //    @RequestMapping(value = "/user", method = RequestMethod.DELETE)
     @DeleteMapping("/user")
-    public String deleteUser(){
+    public String deleteUser() {
         return "DELETE-张三";
     }
 
