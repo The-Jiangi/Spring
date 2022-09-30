@@ -6,7 +6,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor // 全参构造器
+@NoArgsConstructor
 public class Pet {
-    private String pname;
+    private String name;
+    private Integer age;
 
 }

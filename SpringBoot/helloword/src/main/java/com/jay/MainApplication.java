@@ -22,10 +22,10 @@ public class MainApplication {
                 SpringApplication.run(MainApplication.class, args);
 
         // 2、查看容器里面的组件
-        String[] names = run.getBeanDefinitionNames();
-        for (String name : names){
-            System.out.println(name);
-        }
+//        String[] names = run.getBeanDefinitionNames();
+//        for (String name : names){
+//            System.out.println(name);
+//        }
 
         // 3、从容器中获取组件（是单实例对象）
         Pet tom1 = run.getBean("tom", Pet.class);
@@ -45,6 +45,8 @@ public class MainApplication {
         boolean tom = run.containsBean("tom");
         System.out.println("tom: "+tom);
 
-
+        int min =  625;
+        int sec = 1223;
+        System.out.println(min+(sec/60));
     }
 }

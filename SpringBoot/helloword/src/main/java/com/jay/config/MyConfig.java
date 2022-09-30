@@ -4,6 +4,7 @@ import ch.qos.logback.core.boolex.Matcher;
 import com.jay.bean.Car;
 import com.jay.bean.Pet;
 import com.jay.bean.User;
+import com.mysql.cj.util.StringUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -11,6 +12,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.format.FormatterRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author Administrator
@@ -49,7 +54,35 @@ public class MyConfig {
 
     @Bean("tom")
     public Pet catPet(){
-        return new Pet("tomcat");
+        return new Pet("tomcat",5);
     }
 
+    /** WebMvcConfigurer定制化SpringMVC的功能 */
+    @Bean
+    public WebMvcConfigurer webMvcConfigurer(){
+        return new WebMvcConfigurer() {
+
+            /** 功能1、将上传的 pet="阿猫,3" 转换为 pet.name="阿猫";pet.age="3" */
+            @Override
+            public void addFormatters(FormatterRegistry registry) {
+                registry.addConverter(new Converter<String, Pet>() {
+                    @Override
+                    public Pet convert(String source){
+                        // source = "阿猫,3"
+                        if (!StringUtils.isNullOrEmpty(source)){  // 如果source不为空
+                            Pet pet = new Pet();
+                            String[] split = source.split(",");
+                            pet.setName(split[0]);
+                            pet.setAge(Integer.parseInt(split[1]));
+                            return pet;
+                        }
+                        return null;
+                    }
+                });
+            }
+
+            /** 功能2 */
+
+        };
+    }
 }

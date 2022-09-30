@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9dae2b6-b04b-4342-9ce4-942d8c26675b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../cap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../rails.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloword/src/main/resources/META-INF/resources/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloword/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloword/src/main/resources/public/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloword/src/main/resources/resources/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helloword/src/main/resources/static/3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helloword/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/helloword/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +19,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="2EqNcXk3vjnxDTE4Vn4T4LUXrKy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,7 +30,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring/7.demo_事务" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/helloword" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Spring\SpringBoot\helloword\src\main\resources\META-INF" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,13 +46,22 @@
       <option name="presentableId" value="Default" />
       <updated>1663319235589</updated>
       <workItem from="1663319237379" duration="9000" />
+      <workItem from="1664350577103" duration="1212000" />
+      <workItem from="1664351819297" duration="95000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1663319245701">
+    <state x="484" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1664351889240">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1663319245701" />
+    <state x="484" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1664351889240" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1664351914799">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1664351914799" />
   </component>
 </project>

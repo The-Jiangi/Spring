@@ -2,6 +2,7 @@ package com.jay.bean;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @author Administrator
