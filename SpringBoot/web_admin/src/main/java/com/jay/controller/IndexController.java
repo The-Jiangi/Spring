@@ -40,13 +40,14 @@ public class IndexController {
     @GetMapping("/index")
     public String getMain(HttpSession session, Model model){
         // 拦截器(过滤器)，判断登录的用户是否为空
-        if (session.getAttribute("user") != null){
-            return "index";
-        }
-        else {
-            model.addAttribute("msg","请重新登录！");
-            return "login";
-        }
+//        if (session.getAttribute("user") != null){
+//            return "index";
+//        }
+//        else {
+//            model.addAttribute("msg","请重新登录！");
+//            return "login";
+//        }
+        return "index";
 
     }
 }
