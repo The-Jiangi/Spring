@@ -27,8 +27,8 @@ ssh root@192.168.100.114 -p 22922（资产正式）
 
 上传前端
     rsync
-    scp -P 22922 main.js root@192.168.199.11:/app/shared/public/client/assets
-    scp -r -P 62223 '.\dist(9)\*' root@192.168.80.250:/app/shared/public/frontend_admin/
+    scp -P 22922 main-5e4e8c187da60fcc7b79.js root@192.168.199.11:/app/shared/public/client/assets
+    scp -r -P 22922 '.\dist(19)\*' root@192.168.199.11:/app/shared/public/client
     nginx -s reload
 
 修改网址
