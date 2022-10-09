@@ -20,8 +20,8 @@ public class MainApplication {
                 SpringApplication.run(MainApplication.class, args);
 
 
-        int min =  625+23+19+22+23;
-        int sec = 1223+31+43+28+24;
+        int min =  845+18+11+23+28+39;
+        int sec = 1523+ 7+37+29+ 3+55;
         System.out.println(min + (sec / 60));
     }
 }

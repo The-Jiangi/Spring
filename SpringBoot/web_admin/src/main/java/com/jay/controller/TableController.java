@@ -13,6 +13,7 @@ public class TableController {
 
     @GetMapping("/basic_table.html")
     public String basic_table(){
+        int a = 1/0;
         return "table/basic_table";
     }
 
