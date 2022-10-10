@@ -9,3 +9,18 @@ spring:
     resources:
       cache:
         period: 11000     # 静态资源缓存秒数
+  datasource:
+    url: jdbc:mysql://localhost:3307/spring_db?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: "root"
+    password: "123456"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jdbc:
+    template:
+      query-timeout: 3  # 查询超时时间，默认单位为秒(s)
+
+# 配置 mybatis规则
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:   # 指定 mybatis全局配置文件中的相关配置项(配置后就不需要写 config文件)
+    map-underscore-to-camel-case: true  # 开启驼峰命名法

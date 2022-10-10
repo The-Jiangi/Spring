@@ -22,6 +22,11 @@ public class FormController {
         return "form/form_layouts";
     }
 
+    @GetMapping("buttons.html")
+    public String buttons(){
+        return "form/buttons";
+    }
+
     /**
      * MultipartFile 自动封装上传过来的文件
      * @param email
