@@ -5,8 +5,7 @@
 
 二、克隆项目仓库到本地
     cd /folder/
-git 
-    clone https://repourl/reponame.git
+git clone https://repourl/reponame.git
 	git@codeup.teambition.com:5f082bcf8c9b655e96140734/Codeup-Demo.git
 
 三、检查z分支
@@ -14,34 +13,23 @@ git
 
     git branch
 
-     # 应输出：
-     
-* master
-  
-       dev
-
 四、切换工作分支到dev分支
     git checkout dev
-    
-git pull
+    # 拉取分支内容
+    git pull
 
 五、基于dev分支创建feature分支
-    git checkout dev
-    
-git checkout -b fix-update-specific_products-positions-bug
+    git checkout -b fix-bug
 
     # 检查当前工作分支状态
     git status
-    
-# 应输出
-On branch feature_123
 
 六、工作过程中合并dev分支最新代码
     git checkout dev 		#切换到dev分支
     
-git pull 			#获取dev分支最新代码
+    git pull 		#获取dev分支最新代码
     
-git checkout feature_123 	#切换到feature分支
+    git checkout feature_123 	#切换到feature分支
 
     git merge dev 		#合并团队的代码
 
@@ -71,8 +59,6 @@ git checkout feature_123 	#切换到feature分支
 
     获取所有的分支
 	git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
-
-ln -sf /usr/local/lib/libsybdb.so.5.0.0 /usr/local/lib/libsybdb.so.5
-ln -sf /usr/local/cuda/lib64/libcudnn.so.7.0.5 /usr/local/cuda/lib64/libcudnn.so.7
-
+    修改网址
+    git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
 

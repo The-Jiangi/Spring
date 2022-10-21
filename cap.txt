@@ -1,10 +1,3 @@
-git commit -a -m""
-完：
-     修复固定资产分析报表中三个汇总的导出问题
-急：
-    解决固定资产正式端无法上传问题
-等：
-    修复耗材盘点任务单管理没有判断盘点功能
 
 ssh root@192.168.199.11 -p 22526（测试）
 ssh root@114.55.255.190 -p 10022（正式）
@@ -21,19 +14,12 @@ ssh root@192.168.100.114 -p 22922（资产正式）
     chown 600 ~/.ssh/authorized_keys
 
 上传代码
-    docker-compose exec main bash -lc "cap production_hgao deploy"
-    docker-compose exec main bash -lc "cap staging_hgao puma:start"
-    docker-compose exec main bash -lc "puma_error.log"
+    docker-compose exec main bash -lc "cap production_hzqcgjjg deploy"
+    docker-compose exec main bash -lc "cap production_hzqcgjjg puma:start"
 
 上传前端
-    rsync
-    scp -P 22922 main-5e4e8c187da60fcc7b79.js root@192.168.199.11:/app/shared/public/client/assets
-    scp -r -P 22922 '.\dist(19)\*' root@192.168.199.11:/app/shared/public/client
+    scp -r -P 22526 client root@192.168.199.11:/app/shared/public/
     nginx -s reload
-
-修改网址
-    git remote set-url origin (git@e.coding.net:jimjin/comprehensive-assessment-s.git)
-183.129.202.5:10443
 
 20220914055359
 vi /usr/local/bundle/bin/bundle
@@ -45,4 +31,34 @@ RAILS_ENV=production bundle exec rails c
 tail -f log/production.log				# 实时查看日志
 
 强制推送
-    git push -u origin feature-change-password -f
+    git push -u origin feature/dev-jay -f
+
+vpn 
+    行高资产
+	zhangzun@183.134.197.130:4433
+	zhangzun@202205
+    杭二中资产
+	zhangzun@60.190.253.50:4433
+	temp123
+
+coding
+    jay@zanzung.com	Jwh666...
+
+gitee.com
+    The_Jiang	jwh666...
+
+github.com
+    860529382@qq.com	jwh666...
+    The-Jiangi	jwh666...
+
+
+公司固定资产：
+1、负责部分：后端的代码编写
+2、使用技术：Java SpringBoot，git，intellijIdle，若依框架
+3、主要内容：企业固定资产的查看和修改
+4、具体流程：拥有对应权限的人可以查看公司有哪些财产(打印机/打印纸/笔记本电脑)，以及这些财产所在的仓库，负责人，负责人部门，负责人电话和财产的状态(闲置/维修中/借用中等)等信息，还可以更具需求对财产创建出库，入库，盘点，借用，归还等操作。
+
+学校评价平台：
+1、负责部分：后端的代码编写
+2、使用技术：ruby on rails，git，docker
+3、具体内容：老师创建作业、考试、日常活动，学生端看到老师布置的作业、考试、日常活动(日常活动需要根据频率)后，对结果进行提交，对应科目的老师或创建人根据评分标准对结果进行打分，最后对数据处理进行排名统计画图导出等操做
