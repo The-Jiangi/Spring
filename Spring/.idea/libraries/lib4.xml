@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="lib4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-aspects-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-orm-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-expression-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-context-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-beans-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-test-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-instrument-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-expression-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-core-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-jdbc-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-context-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-beans-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-oxm-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-context-support-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-jms-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-aop-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-messaging-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-core-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/3.demo_arr_life_sql/lib/spring-tx-5.2.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -14,11 +14,11 @@ ssh root@192.168.100.114 -p 22922（资产正式）
     chown 600 ~/.ssh/authorized_keys
 
 上传代码
-    docker-compose exec main bash -lc "cap production_hzqcgjjg deploy"
-    docker-compose exec main bash -lc "cap production_hzqcgjjg puma:start"
+    docker-compose exec main bash -lc "cap production deploy"
+    docker-compose exec main bash -lc "cap staging puma:start"
 
 上传前端
-    scp -r -P 22526 client root@192.168.199.11:/app/shared/public/
+    scp -r -P 62223 dist/* root@192.168.199.11:/app/shared/public/frontend_admin
     nginx -s reload
 
 20220914055359
@@ -50,15 +50,3 @@ gitee.com
 github.com
     860529382@qq.com	jwh666...
     The-Jiangi	jwh666...
-
-
-公司固定资产：
-1、负责部分：后端的代码编写
-2、使用技术：Java SpringBoot，git，intellijIdle，若依框架
-3、主要内容：企业固定资产的查看和修改
-4、具体流程：拥有对应权限的人可以查看公司有哪些财产(打印机/打印纸/笔记本电脑)，以及这些财产所在的仓库，负责人，负责人部门，负责人电话和财产的状态(闲置/维修中/借用中等)等信息，还可以更具需求对财产创建出库，入库，盘点，借用，归还等操作。
-
-学校评价平台：
-1、负责部分：后端的代码编写
-2、使用技术：ruby on rails，git，docker
-3、具体内容：老师创建作业、考试、日常活动，学生端看到老师布置的作业、考试、日常活动(日常活动需要根据频率)后，对结果进行提交，对应科目的老师或创建人根据评分标准对结果进行打分，最后对数据处理进行排名统计画图导出等操做

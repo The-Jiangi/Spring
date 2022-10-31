@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="lib6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-aop-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-jdbc-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-aspects-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-expression-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-context-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-beans-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-core-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-instrument-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-core-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-tx-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-beans-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-messaging-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-orm-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-context-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-context-support-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-jms-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-expression-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-test-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-aspects-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-aop-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/5.demo_aop/lib/spring-oxm-5.2.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

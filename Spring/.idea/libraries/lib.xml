@@ -1,0 +1,31 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-instrument-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-expression-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-context-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-test-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-aspects-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-orm-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-expression-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-aop-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-tx-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-jdbc-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-beans-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-beans-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-oxm-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-context-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-core-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-jms-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-aop-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-core-5.3.22.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-context-support-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/druid-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/4.demo_annotation/lib/spring-messaging-5.2.3.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
